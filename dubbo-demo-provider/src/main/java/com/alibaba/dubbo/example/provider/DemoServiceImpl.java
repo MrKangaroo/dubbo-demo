@@ -22,6 +22,7 @@ import org.springframework.stereotype.Service;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.concurrent.TimeUnit;
 
 @Service("demoServiceImpl")
 public class DemoServiceImpl implements DemoService {
@@ -32,4 +33,34 @@ public class DemoServiceImpl implements DemoService {
         return "Hello " + name + ", response from provider: " + RpcContext.getContext().getLocalAddress();
     }
 
+    @Override
+    public String task5Second(String param) {
+        try {
+            TimeUnit.SECONDS.sleep(5);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        return "task5Second " + param + ", response from provider: " + RpcContext.getContext().getLocalAddress();
+    }
+
+    @Override
+    public String task8Second(String param) {
+        try {
+            TimeUnit.SECONDS.sleep(8);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        return "task8Second " + param + ", response from provider: " + RpcContext.getContext().getLocalAddress();
+    }
+
+    @Override
+    public void task10Second(String param) {
+        try {
+            TimeUnit.SECONDS.sleep(10);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        System.out.println("[" + new SimpleDateFormat("HH:mm:ss").format(new Date()) + "] task10Second " + param + ", request from consumer: " + RpcContext.getContext().getRemoteAddress());
+    }
 }

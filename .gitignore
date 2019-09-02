@@ -29,3 +29,5 @@ hs_err_pid*
 /dubbo-demo-api/target/
 /dubbo-demo-consumer/target/
 /dubbo-demo-provider/target/
+/dubbo-demo-consumer/src/main/resources/spring-config-rpc-dubbo.xml
+/dubbo-demo-provider/src/main/resources/spring-config-dubbo.xml

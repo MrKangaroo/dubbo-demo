@@ -20,4 +20,10 @@ public interface DemoService {
 
     String sayHello(String name);
 
+    String task5Second(String param);
+
+    String task8Second(String param);
+
+    void task10Second(String param);
+
 }
