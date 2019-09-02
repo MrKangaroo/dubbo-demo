@@ -14,49 +14,50 @@
   See the License for the specific language governing permissions and
   limitations under the License.
   -->
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>com.alibaba</groupId>
-        <artifactId>dubbo-demo</artifactId>
-        <version>2.6.5</version>
+        <groupId>com.example.server</groupId>
+        <artifactId>spring-boot-dubbo-demo</artifactId>
+        <version>1.0.0</version>
     </parent>
     <artifactId>dubbo-demo-consumer</artifactId>
+    <version>1.0.0</version>
     <packaging>jar</packaging>
-    <name>${project.artifactId}</name>
-    <description>The demo consumer module of dubbo project</description>
-    <properties>
-        <skip_maven_deploy>true</skip_maven_deploy>
-    </properties>
+    <name>dubbo-demo-consumer Maven Webapp</name>
     <dependencies>
         <dependency>
-            <groupId>com.alibaba</groupId>
+            <groupId>com.example.server</groupId>
             <artifactId>dubbo-demo-api</artifactId>
-            <version>${project.parent.version}</version>
+            <version>1.0.0</version>
         </dependency>
         <dependency>
             <groupId>com.alibaba</groupId>
-            <artifactId>dubbo-config-spring</artifactId>
+            <artifactId>dubbo</artifactId>
+            <version>2.6.5</version>
         </dependency>
+
+        <!-- curator -->
         <dependency>
-            <groupId>com.alibaba</groupId>
-            <artifactId>dubbo-registry-zookeeper</artifactId>
+            <groupId>org.apache.curator</groupId>
+            <artifactId>curator-framework</artifactId>
+            <version>2.12.0</version>
         </dependency>
+
+        <!-- netty -->
         <dependency>
-            <groupId>com.alibaba</groupId>
-            <artifactId>dubbo-registry-multicast</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.alibaba</groupId>
-            <artifactId>dubbo-rpc-dubbo</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.alibaba</groupId>
-            <artifactId>dubbo-remoting-netty</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.alibaba</groupId>
-            <artifactId>dubbo-serialization-hessian2</artifactId>
+            <groupId>io.netty</groupId>
+            <artifactId>netty-all</artifactId>
+            <version>4.1.36.Final</version>
         </dependency>
     </dependencies>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
 </project>
