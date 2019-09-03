@@ -11,4 +11,6 @@
         <dubbo:method name="task8Second" async="true" />
         <dubbo:method name="task10Second" async="true" />
     </dubbo:reference>
+
+    <dubbo:reference id="callbackService" interface="com.alibaba.dubbo.example.CallBackService"/>
 </beans>

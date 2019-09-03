@@ -1,5 +1,7 @@
 package com.alibaba.dubbo.example.consumer.controller;
 
+import com.alibaba.dubbo.example.CallBackListener;
+import com.alibaba.dubbo.example.CallBackService;
 import com.alibaba.dubbo.example.DemoService;
 import com.alibaba.dubbo.rpc.RpcContext;
 import com.google.common.base.Stopwatch;
@@ -21,6 +23,8 @@ public class DemoController {
     @Resource
     private DemoService demoService;
 
+    @Resource
+    private CallBackService callbackService;
 
     @RequestMapping("/sayHello")
     public String sayHello(String name) throws ExecutionException {
@@ -90,5 +94,18 @@ public class DemoController {
         demoService.task12Second(param);
         logger.info("syncTask cost : {} s", stopwatch.elapsed(TimeUnit.SECONDS));
         return "syncTask";
+    }
+
+    @RequestMapping("/callback")
+    public String callback(String param) {
+        Stopwatch stopwatch = Stopwatch.createStarted();
+        callbackService.addListener(param, new CallBackListener() {
+            @Override
+            public void changed(String msg) {
+                System.out.println("callback : " + msg);
+            }
+        });
+        logger.info("callback cost : {} s", stopwatch.elapsed(TimeUnit.SECONDS));
+        return "callback";
     }
 }

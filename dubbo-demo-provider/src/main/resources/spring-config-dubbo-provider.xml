@@ -6,4 +6,13 @@
 
     <!-- 声明需要暴露的服务接口 -->
     <dubbo:service interface="com.alibaba.dubbo.example.DemoService" group ="bj" version="1.0.0" ref="demoServiceImpl" retries="0" loadbalance="random" actives="0"/>
+
+    <bean id="callbackService" class="com.alibaba.dubbo.example.provider.service.CallBackServiceImpl"/>
+
+    <dubbo:service interface="com.alibaba.dubbo.example.CallBackService" ref="callbackService" >
+        <dubbo:method name="addListener">
+            <dubbo:argument index="1" callback="true"/>
+        </dubbo:method>
+    </dubbo:service>
+
 </beans>
