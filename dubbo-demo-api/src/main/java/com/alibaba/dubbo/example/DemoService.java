@@ -18,7 +18,9 @@ package com.alibaba.dubbo.example;
 
 public interface DemoService {
 
-    String sayHello(String name);
+    String sayHello(int id, String name);
+
+//    String sayHello(String name);
 
     String task5Second(String param);
 

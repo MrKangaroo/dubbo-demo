@@ -4,9 +4,12 @@
        xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
 
+    <bean id="demoCallback" class="com.alibaba.dubbo.example.consumer.NotifyImpl"/>
+
     <!-- 生成远程服务代理,可以和本地bean一样使用demoService -->
     <dubbo:reference id="demoService" interface="com.alibaba.dubbo.example.DemoService" group ="bj" version="1.0.0" timeout="600000">
-        <dubbo:method name="sayHello" async="true" />
+        <dubbo:method name="sayHello" onreturn="demoCallback.onReturn" onthrow="demoCallback.onThrow"/>
+        <!--<dubbo:method name="sayHello" onreturn="demoCallback.onreturn" onthrow="demoCallback.onthrow" async="true"/>-->
         <dubbo:method name="task5Second" async="true" />
         <dubbo:method name="task8Second" async="true" />
         <dubbo:method name="task10Second" async="true" />

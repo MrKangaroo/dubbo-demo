@@ -27,16 +27,16 @@ public class DemoController {
     private CallBackService callbackService;
 
     @RequestMapping("/sayHello")
-    public String sayHello(String name) throws ExecutionException {
+    public String sayHello(int id, String name) throws ExecutionException {
 
-        Future<String> f = RpcContext.getContext().asyncCall(() -> demoService.sayHello(name));
-        try {
-            return f.get();
-        } catch (InterruptedException e) {
-            logger.error("InterruptedException");
-        }
+//        Future<String> f = RpcContext.getContext().asyncCall(() -> demoService.sayHello(id, name));
+//        try {
+//            return f.get();
+//        } catch (InterruptedException e) {
+//            logger.error("InterruptedException");
+//        }
 
-        return null;
+        return demoService.sayHello(id,name);
     }
 
     @RequestMapping("/asyncTask")
