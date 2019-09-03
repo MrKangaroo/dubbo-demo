@@ -2,15 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="79ede181-5414-4aa7-ace5-3a6abf4d2772" name="Default Changelist" comment="async call">
-      <change afterPath="$PROJECT_DIR$/dubbo-demo-api/src/main/java/com/alibaba/dubbo/example/Notify.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dubbo-demo-consumer/src/main/java/com/alibaba/dubbo/example/consumer/NotifyImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-demo-api/src/main/java/com/alibaba/dubbo/example/DemoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-demo-api/src/main/java/com/alibaba/dubbo/example/DemoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-demo-consumer/src/main/java/com/alibaba/dubbo/example/consumer/Consumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-demo-consumer/src/main/java/com/alibaba/dubbo/example/consumer/Consumer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-demo-consumer/src/main/java/com/alibaba/dubbo/example/consumer/controller/DemoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-demo-consumer/src/main/java/com/alibaba/dubbo/example/consumer/controller/DemoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-demo-consumer/src/main/resources/spring-config-rpc-dubbo-consumer.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-demo-consumer/src/main/resources/spring-config-rpc-dubbo-consumer.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dubbo-demo-consumer/src/main/resources/spring-config-rpc-dubbo.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-demo-consumer/src/main/resources/spring-config-rpc-dubbo.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-demo-provider/src/main/java/com/alibaba/dubbo/example/provider/DemoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-demo-provider/src/main/java/com/alibaba/dubbo/example/provider/DemoServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dubbo-demo-provider/src/main/resources/spring-config-dubbo.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-demo-provider/src/main/resources/spring-config-dubbo.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/dubbo-demo-consumer/target/" />
@@ -73,7 +66,7 @@
           <entry key="gitignore" value="14" />
           <entry key="java" value="1327" />
           <entry key="properties" value="2" />
-          <entry key="txt" value="25" />
+          <entry key="txt" value="31" />
           <entry key="xml" value="321" />
         </counts>
       </usages-collector>
@@ -81,7 +74,7 @@
         <counts>
           <entry key="Git file" value="14" />
           <entry key="JAVA" value="1327" />
-          <entry key="PLAIN_TEXT" value="25" />
+          <entry key="PLAIN_TEXT" value="31" />
           <entry key="Properties" value="2" />
           <entry key="XML" value="321" />
         </counts>
@@ -148,16 +141,16 @@
         <entry file="file://$PROJECT_DIR$/dubbo-demo-api/src/main/java/com/alibaba/dubbo/example/Notify.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="165">
-              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+              <caret line="11" selection-start-line="11" selection-end-line="11" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dubbo-demo-consumer/src/main/java/com/alibaba/dubbo/example/consumer/NotifyImpl.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="420">
-              <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+              <caret line="28" selection-start-line="28" selection-end-line="28" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#283#300#0" expanded="true" />
@@ -187,8 +180,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="jar://$USER_HOME$/work/m2/repository/com/alibaba/dubbo/2.6.5/dubbo-2.6.5-sources.jar!/com/alibaba/dubbo/rpc/protocol/dubbo/filter/FutureFilter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="410">
-              <caret line="157" column="9" lean-forward="true" selection-start-line="157" selection-start-column="9" selection-end-line="157" selection-end-column="9" />
+            <state relative-caret-position="440">
+              <caret line="159" column="28" selection-start-line="159" selection-start-column="28" selection-end-line="159" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -202,11 +195,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/src.zip!/java/lang/reflect/Method.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="334">
-              <caret line="483" column="18" selection-start-line="483" selection-start-column="18" selection-end-line="483" selection-end-column="18" />
+            <state relative-caret-position="720">
+              <caret line="82" column="75" lean-forward="true" selection-start-line="82" selection-start-column="75" selection-end-line="82" selection-end-column="75" />
             </state>
           </provider>
         </entry>
@@ -635,6 +628,11 @@
             <path>
               <item name="dubbo-demo" type="b2602c69:ProjectViewProjectNode" />
               <item name="dubbo-demo" type="462c0819:PsiDirectoryNode" />
+              <item name=".idea" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dubbo-demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dubbo-demo" type="462c0819:PsiDirectoryNode" />
               <item name="dubbo-demo-api" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -792,7 +790,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="add_unversioned_files" value="true&#10;/Users/mr-kangaroo/git/dubbo-demo/dubbo-demo-provider/src/main/resources/spring-config-dubbo.xml" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1567496388209" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1567496482329" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -902,7 +900,7 @@
       <updated>1567422401641</updated>
       <workItem from="1567422403633" duration="502000" />
       <workItem from="1567423036383" duration="1223000" />
-      <workItem from="1567424319225" duration="19737000" />
+      <workItem from="1567424319225" duration="20721000" />
     </task>
     <task id="LOCAL-00001" summary="async call">
       <created>1567429708530</created>
@@ -918,11 +916,18 @@
       <option name="project" value="LOCAL" />
       <updated>1567492130586</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="notify">
+      <created>1567496443300</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1567496443300</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21462000" />
+    <option name="totallyTimeSpent" value="22446000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1280" y="-203" width="2560" height="1417" extended-state="6" />
@@ -939,7 +944,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.5509434" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.4" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -980,7 +985,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="async call" />
     <MESSAGE value="callback call" />
-    <option name="LAST_COMMIT_MESSAGE" value="callback call" />
+    <MESSAGE value="notify" />
+    <option name="LAST_COMMIT_MESSAGE" value="notify" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1232,13 +1238,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/src.zip!/java/lang/reflect/Method.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="334">
-          <caret line="483" column="18" selection-start-line="483" selection-start-column="18" selection-end-line="483" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/work/m2/repository/com/alibaba/dubbo/2.6.5/dubbo-2.6.5-sources.jar!/com/alibaba/dubbo/common/Constants.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="257">
@@ -1261,14 +1260,7 @@
     <entry file="file://$PROJECT_DIR$/dubbo-demo-api/src/main/java/com/alibaba/dubbo/example/Notify.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/work/m2/repository/com/alibaba/dubbo/2.6.5/dubbo-2.6.5-sources.jar!/com/alibaba/dubbo/rpc/protocol/dubbo/filter/FutureFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="410">
-          <caret line="157" column="9" lean-forward="true" selection-start-line="157" selection-start-column="9" selection-end-line="157" selection-end-column="9" />
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
         </state>
       </provider>
     </entry>
@@ -1289,11 +1281,25 @@
     <entry file="file://$PROJECT_DIR$/dubbo-demo-consumer/src/main/java/com/alibaba/dubbo/example/consumer/NotifyImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
-          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+          <caret line="28" selection-start-line="28" selection-end-line="28" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#283#300#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/work/m2/repository/com/alibaba/dubbo/2.6.5/dubbo-2.6.5-sources.jar!/com/alibaba/dubbo/rpc/protocol/dubbo/filter/FutureFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="159" column="28" selection-start-line="159" selection-start-column="28" selection-end-line="159" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/src.zip!/java/lang/reflect/Method.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="720">
+          <caret line="82" column="75" lean-forward="true" selection-start-line="82" selection-start-column="75" selection-end-line="82" selection-end-column="75" />
         </state>
       </provider>
     </entry>
