@@ -26,4 +26,6 @@ public interface DemoService {
 
     void task10Second(String param);
 
+    void task12Second(String param);
+
 }

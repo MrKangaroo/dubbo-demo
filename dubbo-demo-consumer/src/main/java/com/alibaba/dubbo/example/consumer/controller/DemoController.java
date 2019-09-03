@@ -26,7 +26,6 @@ public class DemoController {
     public String sayHello(String name) throws ExecutionException {
 
         Future<String> f = RpcContext.getContext().asyncCall(() -> demoService.sayHello(name));
-
         try {
             return f.get();
         } catch (InterruptedException e) {
@@ -81,7 +80,15 @@ public class DemoController {
     public String asyncTask3(String param) {
         Stopwatch stopwatch = Stopwatch.createStarted();
         demoService.task10Second(param);
-        logger.info("asyncTask2 cost : {} s", stopwatch.elapsed(TimeUnit.SECONDS));
+        logger.info("asyncTask3 cost : {} s", stopwatch.elapsed(TimeUnit.SECONDS));
         return "asyncTask3";
+    }
+
+    @RequestMapping("/syncTask")
+    public String syncTask(String param) {
+        Stopwatch stopwatch = Stopwatch.createStarted();
+        demoService.task12Second(param);
+        logger.info("syncTask cost : {} s", stopwatch.elapsed(TimeUnit.SECONDS));
+        return "syncTask";
     }
 }

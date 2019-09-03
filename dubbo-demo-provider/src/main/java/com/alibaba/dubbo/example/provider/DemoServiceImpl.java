@@ -63,4 +63,15 @@ public class DemoServiceImpl implements DemoService {
 
         System.out.println("[" + new SimpleDateFormat("HH:mm:ss").format(new Date()) + "] task10Second " + param + ", request from consumer: " + RpcContext.getContext().getRemoteAddress());
     }
+
+    @Override
+    public void task12Second(String param) {
+        try {
+            TimeUnit.SECONDS.sleep(12);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        System.out.println("[" + new SimpleDateFormat("HH:mm:ss").format(new Date()) + "] task12Second " + param + ", request from consumer: " + RpcContext.getContext().getRemoteAddress());
+    }
 }
