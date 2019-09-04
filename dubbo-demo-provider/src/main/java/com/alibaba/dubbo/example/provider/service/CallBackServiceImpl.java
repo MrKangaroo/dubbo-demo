@@ -2,6 +2,7 @@ package com.alibaba.dubbo.example.provider.service;
 
 import com.alibaba.dubbo.example.CallBackListener;
 import com.alibaba.dubbo.example.CallBackService;
+import com.alibaba.dubbo.rpc.RpcContext;
 import com.google.common.collect.Maps;
 
 import java.text.SimpleDateFormat;
@@ -18,25 +19,25 @@ public class CallBackServiceImpl implements CallBackService {
     private final Map<String, CallBackListener> listeners = Maps.newConcurrentMap();
 
     public CallBackServiceImpl() {
-        Thread t = new Thread(new Runnable() {
-            @Override
-            public void run() {
-                while (true){
-                    try {
-                        for (Map.Entry<String, CallBackListener> entry : listeners.entrySet()) {
-                            try {
-                                entry.getValue().changed(getChanged(entry.getKey()));
-                            } catch (Exception e) {
-                                listeners.remove(entry.getKey());
-                            }
+
+        Runnable task = () -> {
+            while (true) {
+                try {
+                    for (Map.Entry<String, CallBackListener> entry : listeners.entrySet()) {
+                        try {
+                            entry.getValue().changed(getChanged(entry.getKey()));
+                        } catch (Exception e) {
+                            listeners.remove(entry.getKey());
                         }
-                        Thread.sleep(5000);
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
                     }
+                    Thread.sleep(5000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
                 }
             }
-        });
+        };
+
+        Thread t = new Thread(task);
         t.setDaemon(true);
         t.start();
     }
